@@ -1,0 +1,6 @@
+[package]
+name = "atsamd09-rs"
+version = "0.1.0"
+authors = ["jonwingfield <wingfield.jon@gmail.com>"]
+
+[dependencies]
