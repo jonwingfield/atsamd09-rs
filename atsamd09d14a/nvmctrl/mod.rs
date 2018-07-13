@@ -3,23 +3,23 @@
 pub struct RegisterBlock {
     #[doc = "0x00 - Control A"]
     pub ctrla: CTRLA,
-    _reserved0: [u8; 2usize],
+    _reserved1: [u8; 2usize],
     #[doc = "0x04 - Control B"]
     pub ctrlb: CTRLB,
     #[doc = "0x08 - NVM Parameter"]
     pub param: PARAM,
     #[doc = "0x0c - Interrupt Enable Clear"]
     pub intenclr: INTENCLR,
-    _reserved1: [u8; 3usize],
+    _reserved4: [u8; 3usize],
     #[doc = "0x10 - Interrupt Enable Set"]
     pub intenset: INTENSET,
-    _reserved2: [u8; 3usize],
+    _reserved5: [u8; 3usize],
     #[doc = "0x14 - Interrupt Flag Status and Clear"]
     pub intflag: INTFLAG,
-    _reserved3: [u8; 3usize],
+    _reserved6: [u8; 3usize],
     #[doc = "0x18 - Status"]
     pub status: STATUS,
-    _reserved4: [u8; 2usize],
+    _reserved7: [u8; 2usize],
     #[doc = "0x1c - Address"]
     pub addr: ADDR,
     #[doc = "0x20 - Lock Section"]

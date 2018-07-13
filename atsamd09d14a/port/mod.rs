@@ -23,7 +23,7 @@ pub struct RegisterBlock {
     pub ctrl0: CTRL,
     #[doc = "0x28 - Write Configuration"]
     pub wrconfig0: WRCONFIG,
-    _reserved0: [u8; 4usize],
+    _reserved11: [u8; 4usize],
     #[doc = "0x30 - Peripheral Multiplexing n - Group 0"]
     pub pmux0_: [PMUX0_; 16],
     #[doc = "0x40 - Pin Configuration n - Group 0"]

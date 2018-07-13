@@ -11,35 +11,35 @@ pub struct RegisterBlock {
     pub pclksr: PCLKSR,
     #[doc = "0x10 - External Multipurpose Crystal Oscillator (XOSC) Control"]
     pub xosc: XOSC,
-    _reserved0: [u8; 2usize],
+    _reserved5: [u8; 2usize],
     #[doc = "0x14 - 32kHz External Crystal Oscillator (XOSC32K) Control"]
     pub xosc32k: XOSC32K,
-    _reserved1: [u8; 2usize],
+    _reserved6: [u8; 2usize],
     #[doc = "0x18 - 32kHz Internal Oscillator (OSC32K) Control"]
     pub osc32k: OSC32K,
     #[doc = "0x1c - 32kHz Ultra Low Power Internal Oscillator (OSCULP32K) Control"]
     pub osculp32k: OSCULP32K,
-    _reserved2: [u8; 3usize],
+    _reserved8: [u8; 3usize],
     #[doc = "0x20 - 8MHz Internal Oscillator (OSC8M) Control"]
     pub osc8m: OSC8M,
     #[doc = "0x24 - DFLL48M Control"]
     pub dfllctrl: DFLLCTRL,
-    _reserved3: [u8; 2usize],
+    _reserved10: [u8; 2usize],
     #[doc = "0x28 - DFLL48M Value"]
     pub dfllval: DFLLVAL,
     #[doc = "0x2c - DFLL48M Multiplier"]
     pub dfllmul: DFLLMUL,
     #[doc = "0x30 - DFLL48M Synchronization"]
     pub dfllsync: DFLLSYNC,
-    _reserved4: [u8; 3usize],
+    _reserved13: [u8; 3usize],
     #[doc = "0x34 - 3.3V Brown-Out Detector (BOD33) Control"]
     pub bod33: BOD33,
-    _reserved5: [u8; 8usize],
+    _reserved14: [u8; 8usize],
     #[doc = "0x40 - Voltage References System (VREF) Control"]
     pub vref: VREF,
     #[doc = "0x44 - DPLL Control A"]
     pub dpllctrla: DPLLCTRLA,
-    _reserved6: [u8; 3usize],
+    _reserved16: [u8; 3usize],
     #[doc = "0x48 - DPLL Ratio Control"]
     pub dpllratio: DPLLRATIO,
     #[doc = "0x4c - DPLL Control B"]

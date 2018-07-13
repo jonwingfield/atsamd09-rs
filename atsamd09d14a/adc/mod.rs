@@ -11,18 +11,18 @@ pub struct RegisterBlock {
     pub sampctrl: SAMPCTRL,
     #[doc = "0x04 - Control B"]
     pub ctrlb: CTRLB,
-    _reserved0: [u8; 2usize],
+    _reserved5: [u8; 2usize],
     #[doc = "0x08 - Window Monitor Control"]
     pub winctrl: WINCTRL,
-    _reserved1: [u8; 3usize],
+    _reserved6: [u8; 3usize],
     #[doc = "0x0c - Software Trigger"]
     pub swtrig: SWTRIG,
-    _reserved2: [u8; 3usize],
+    _reserved7: [u8; 3usize],
     #[doc = "0x10 - Input Control"]
     pub inputctrl: INPUTCTRL,
     #[doc = "0x14 - Event Control"]
     pub evctrl: EVCTRL,
-    _reserved3: [u8; 1usize],
+    _reserved9: [u8; 1usize],
     #[doc = "0x16 - Interrupt Enable Clear"]
     pub intenclr: INTENCLR,
     #[doc = "0x17 - Interrupt Enable Set"]
@@ -35,10 +35,10 @@ pub struct RegisterBlock {
     pub result: RESULT,
     #[doc = "0x1c - Window Monitor Lower Threshold"]
     pub winlt: WINLT,
-    _reserved4: [u8; 2usize],
+    _reserved15: [u8; 2usize],
     #[doc = "0x20 - Window Monitor Upper Threshold"]
     pub winut: WINUT,
-    _reserved5: [u8; 2usize],
+    _reserved16: [u8; 2usize],
     #[doc = "0x24 - Gain Correction"]
     pub gaincorr: GAINCORR,
     #[doc = "0x26 - Offset Correction"]

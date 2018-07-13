@@ -9,15 +9,15 @@ pub struct RegisterBlock {
     pub flow: FLOW,
     #[doc = "0x0c - MTB Base"]
     pub base: BASE,
-    _reserved0: [u8; 3824usize],
+    _reserved4: [u8; 3824usize],
     #[doc = "0xf00 - MTB Integration Mode Control"]
     pub itctrl: ITCTRL,
-    _reserved1: [u8; 156usize],
+    _reserved5: [u8; 156usize],
     #[doc = "0xfa0 - MTB Claim Set"]
     pub claimset: CLAIMSET,
     #[doc = "0xfa4 - MTB Claim Clear"]
     pub claimclr: CLAIMCLR,
-    _reserved2: [u8; 8usize],
+    _reserved7: [u8; 8usize],
     #[doc = "0xfb0 - MTB Lock Access"]
     pub lockaccess: LOCKACCESS,
     #[doc = "0xfb4 - MTB Lock Status"]
@@ -26,7 +26,7 @@ pub struct RegisterBlock {
     pub authstatus: AUTHSTATUS,
     #[doc = "0xfbc - MTB Device Architecture"]
     pub devarch: DEVARCH,
-    _reserved3: [u8; 8usize],
+    _reserved11: [u8; 8usize],
     #[doc = "0xfc8 - MTB Device Configuration"]
     pub devid: DEVID,
     #[doc = "0xfcc - MTB Device Type"]

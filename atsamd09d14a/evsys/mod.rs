@@ -3,12 +3,12 @@
 pub struct RegisterBlock {
     #[doc = "0x00 - Control"]
     pub ctrl: CTRL,
-    _reserved0: [u8; 3usize],
+    _reserved1: [u8; 3usize],
     #[doc = "0x04 - Channel"]
     pub channel: CHANNEL,
     #[doc = "0x08 - User Multiplexer"]
     pub user: USER,
-    _reserved1: [u8; 2usize],
+    _reserved3: [u8; 2usize],
     #[doc = "0x0c - Channel Status"]
     pub chstatus: CHSTATUS,
     #[doc = "0x10 - Interrupt Enable Clear"]

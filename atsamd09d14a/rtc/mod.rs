@@ -1,6 +1,10 @@
 #[doc = r" Register block"]
 #[repr(C)]
-pub struct RegisterBlock {
+pub union RegisterBlock {
+    #[doc = "0x00 - Clock/Calendar with Alarm"]
+    pub mode2: MODE2,
+    #[doc = "0x00 - 16-bit Counter with Two 16-bit Compares"]
+    pub mode1: MODE1,
     #[doc = "0x00 - 32-bit Counter with Single 32-bit Compare"]
     pub mode0: MODE0,
 }
@@ -19,17 +23,17 @@ pub struct MODE0 {
     pub intenset: self::mode0::INTENSET,
     #[doc = "0x08 - MODE0 Interrupt Flag Status and Clear"]
     pub intflag: self::mode0::INTFLAG,
-    _reserved0: [u8; 1usize],
+    _reserved6: [u8; 1usize],
     #[doc = "0x0a - Status"]
     pub status: self::mode0::STATUS,
     #[doc = "0x0b - Debug Control"]
     pub dbgctrl: self::mode0::DBGCTRL,
     #[doc = "0x0c - Frequency Correction"]
     pub freqcorr: self::mode0::FREQCORR,
-    _reserved1: [u8; 3usize],
+    _reserved9: [u8; 3usize],
     #[doc = "0x10 - MODE0 Counter Value"]
     pub count: self::mode0::COUNT,
-    _reserved2: [u8; 4usize],
+    _reserved10: [u8; 4usize],
     #[doc = "0x18 - MODE0 Compare n Value"]
     pub comp: [self::mode0::COMP; 1],
 }
@@ -51,20 +55,20 @@ pub struct MODE1 {
     pub intenset: self::mode1::INTENSET,
     #[doc = "0x08 - MODE1 Interrupt Flag Status and Clear"]
     pub intflag: self::mode1::INTFLAG,
-    _reserved0: [u8; 1usize],
+    _reserved6: [u8; 1usize],
     #[doc = "0x0a - Status"]
     pub status: self::mode1::STATUS,
     #[doc = "0x0b - Debug Control"]
     pub dbgctrl: self::mode1::DBGCTRL,
     #[doc = "0x0c - Frequency Correction"]
     pub freqcorr: self::mode1::FREQCORR,
-    _reserved1: [u8; 3usize],
+    _reserved9: [u8; 3usize],
     #[doc = "0x10 - MODE1 Counter Value"]
     pub count: self::mode1::COUNT,
-    _reserved2: [u8; 2usize],
+    _reserved10: [u8; 2usize],
     #[doc = "0x14 - MODE1 Counter Period"]
     pub per: self::mode1::PER,
-    _reserved3: [u8; 2usize],
+    _reserved11: [u8; 2usize],
     #[doc = "0x18 - MODE1 Compare n Value"]
     pub comp: [self::mode1::COMP; 2],
 }
@@ -86,17 +90,17 @@ pub struct MODE2 {
     pub intenset: self::mode2::INTENSET,
     #[doc = "0x08 - MODE2 Interrupt Flag Status and Clear"]
     pub intflag: self::mode2::INTFLAG,
-    _reserved0: [u8; 1usize],
+    _reserved6: [u8; 1usize],
     #[doc = "0x0a - Status"]
     pub status: self::mode2::STATUS,
     #[doc = "0x0b - Debug Control"]
     pub dbgctrl: self::mode2::DBGCTRL,
     #[doc = "0x0c - Frequency Correction"]
     pub freqcorr: self::mode2::FREQCORR,
-    _reserved1: [u8; 3usize],
+    _reserved9: [u8; 3usize],
     #[doc = "0x10 - MODE2 Clock Value"]
     pub clock: self::mode2::CLOCK,
-    _reserved2: [u8; 4usize],
+    _reserved10: [u8; 4usize],
     #[doc = "0x18 - MODE2 Alarm n Value"]
     pub alarm0: self::mode2::ALARM,
     #[doc = "0x1c - MODE2 Alarm n Mask"]

@@ -15,15 +15,15 @@ pub struct RegisterBlock {
     pub dbgctrl: DBGCTRL,
     #[doc = "0x0e - QOS Control"]
     pub qosctrl: QOSCTRL,
-    _reserved0: [u8; 1usize],
+    _reserved7: [u8; 1usize],
     #[doc = "0x10 - Software Trigger Control"]
     pub swtrigctrl: SWTRIGCTRL,
     #[doc = "0x14 - Priority Control 0"]
     pub prictrl0: PRICTRL0,
-    _reserved1: [u8; 8usize],
+    _reserved9: [u8; 8usize],
     #[doc = "0x20 - Interrupt Pending"]
     pub intpend: INTPEND,
-    _reserved2: [u8; 2usize],
+    _reserved10: [u8; 2usize],
     #[doc = "0x24 - Interrupt Status"]
     pub intstatus: INTSTATUS,
     #[doc = "0x28 - Busy Channels"]
@@ -36,15 +36,15 @@ pub struct RegisterBlock {
     pub baseaddr: BASEADDR,
     #[doc = "0x38 - Write-Back Memory Section Base Address"]
     pub wrbaddr: WRBADDR,
-    _reserved3: [u8; 3usize],
+    _reserved16: [u8; 3usize],
     #[doc = "0x3f - Channel ID"]
     pub chid: CHID,
     #[doc = "0x40 - Channel Control A"]
     pub chctrla: CHCTRLA,
-    _reserved4: [u8; 3usize],
+    _reserved18: [u8; 3usize],
     #[doc = "0x44 - Channel Control B"]
     pub chctrlb: CHCTRLB,
-    _reserved5: [u8; 4usize],
+    _reserved19: [u8; 4usize],
     #[doc = "0x4c - Channel Interrupt Enable Clear"]
     pub chintenclr: CHINTENCLR,
     #[doc = "0x4d - Channel Interrupt Enable Set"]

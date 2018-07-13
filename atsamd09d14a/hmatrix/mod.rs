@@ -1,7 +1,6 @@
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    _reserved0: [u8; 128usize],
     #[doc = "0x80 - Priority A for Slave"]
     pub pras0: PRAS,
     #[doc = "0x84 - Priority B for Slave"]
@@ -66,7 +65,7 @@ pub struct RegisterBlock {
     pub pras15: PRAS,
     #[doc = "0xfc - Priority B for Slave"]
     pub prbs15: PRBS,
-    _reserved1: [u8; 16usize],
+    _reserved32: [u8; 16usize],
     #[doc = "0x110 - Special Function"]
     pub sfr: [SFR; 16],
 }

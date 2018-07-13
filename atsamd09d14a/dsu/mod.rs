@@ -7,7 +7,7 @@ pub struct RegisterBlock {
     pub statusa: STATUSA,
     #[doc = "0x02 - Status B"]
     pub statusb: STATUSB,
-    _reserved0: [u8; 1usize],
+    _reserved3: [u8; 1usize],
     #[doc = "0x04 - Address"]
     pub addr: ADDR,
     #[doc = "0x08 - Length"]
@@ -18,15 +18,15 @@ pub struct RegisterBlock {
     pub dcc: [DCC; 2],
     #[doc = "0x18 - Device Identification"]
     pub did: DID,
-    _reserved1: [u8; 212usize],
+    _reserved8: [u8; 212usize],
     #[doc = "0xf0 - Device Configuration"]
     pub dcfg: [DCFG; 2],
-    _reserved2: [u8; 3848usize],
+    _reserved9: [u8; 3848usize],
     #[doc = "0x1000 - Coresight ROM Table Entry n"]
     pub entry: [ENTRY; 2],
     #[doc = "0x1008 - Coresight ROM Table End"]
     pub end: END,
-    _reserved3: [u8; 4032usize],
+    _reserved11: [u8; 4032usize],
     #[doc = "0x1fcc - Coresight ROM Table Memory Type"]
     pub memtype: MEMTYPE,
     #[doc = "0x1fd0 - Peripheral Identification 4"]

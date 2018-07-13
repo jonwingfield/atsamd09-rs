@@ -7,7 +7,7 @@ pub struct RegisterBlock {
     pub sleep: SLEEP,
     #[doc = "0x02 - External Reset Controller"]
     pub extctrl: EXTCTRL,
-    _reserved0: [u8; 5usize],
+    _reserved3: [u8; 5usize],
     #[doc = "0x08 - CPU Clock Select"]
     pub cpusel: CPUSEL,
     #[doc = "0x09 - APBA Clock Select"]
@@ -16,7 +16,7 @@ pub struct RegisterBlock {
     pub apbbsel: APBBSEL,
     #[doc = "0x0b - APBC Clock Select"]
     pub apbcsel: APBCSEL,
-    _reserved1: [u8; 8usize],
+    _reserved7: [u8; 8usize],
     #[doc = "0x14 - AHB Mask"]
     pub ahbmask: AHBMASK,
     #[doc = "0x18 - APBA Mask"]
@@ -25,14 +25,14 @@ pub struct RegisterBlock {
     pub apbbmask: APBBMASK,
     #[doc = "0x20 - APBC Mask"]
     pub apbcmask: APBCMASK,
-    _reserved2: [u8; 16usize],
+    _reserved11: [u8; 16usize],
     #[doc = "0x34 - Interrupt Enable Clear"]
     pub intenclr: INTENCLR,
     #[doc = "0x35 - Interrupt Enable Set"]
     pub intenset: INTENSET,
     #[doc = "0x36 - Interrupt Flag Status and Clear"]
     pub intflag: INTFLAG,
-    _reserved3: [u8; 1usize],
+    _reserved14: [u8; 1usize],
     #[doc = "0x38 - Reset Cause"]
     pub rcause: RCAUSE,
 }
