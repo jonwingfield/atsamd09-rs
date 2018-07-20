@@ -48,19 +48,15 @@ impl<MODE> PadPin<$PadType> for gpio::$PinType<MODE> {
 }
 
 pad!(
-// sercom0[0]:  PA04:D   PA08:C
-// sercom0[1]:  PA05:D   PA09:C
-// sercom0[2]:  PA06:D   PA10:C
-// sercom0[3]:  PA07:D   PA11:C
 
 pub enum Sercom0Pad0 {
     Pa4(pa4, PfD),
-    Pa8(pa8, PfC),
+    Pa14(pa14, PfC),
 }
 
 pub enum Sercom0Pad1 {
     Pa5(pa5, PfD),
-    Pa9(pa9, PfC),
+    Pa15(pa15, PfC),
 }
 
 pub enum Sercom0Pad2 {
@@ -73,78 +69,20 @@ pub enum Sercom0Pad3 {
     Pa11(pa11, PfC),
 }
 
-// sercom1[0]:  PA16:C   PA00:D
-// sercom1[1]:  PA17:C   PA01:D
-// sercom1[2]:  PA18:C   PA30:D
-// sercom1[3]:  PA19:C   PA31:D
-
 pub enum Sercom1Pad0 {
-    Pa0(pa0, PfD),
-    Pa16(pa16, PfC),
+    Pa22(pa22, PfC),
 }
 
 pub enum Sercom1Pad1 {
-    Pa1(pa1, PfD),
-    Pa17(pa17, PfC),
+    Pa23(pa23, PfC),
 }
 
 pub enum Sercom1Pad2 {
-    Pa18(pa18, PfC),
-    Pa30(pa30, PfD),
+    Pa16(pa16, PfC),
 }
 
 pub enum Sercom1Pad3 {
-    Pa19(pa19, PfC),
-    Pa31(pa31, PfD),
-}
-
-// sercom2[0]:  PA12:C   PA08:D
-// sercom2[1]:  PA13:C   PA09:D
-// sercom2[2]:  PA14:C   PA10:D
-// sercom2[3]:  PA15:C   PA11:D
-
-pub enum Sercom2Pad0 {
-    Pa8(pa8, PfD),
-    Pa12(pa12, PfC),
-}
-
-pub enum Sercom2Pad1 {
-    Pa9(pa9, PfD),
-    Pa13(pa13, PfC),
-}
-
-pub enum Sercom2Pad2 {
-    Pa10(pa10, PfD),
-    Pa14(pa14, PfC),
-}
-
-pub enum Sercom2Pad3 {
-    Pa11(pa11, PfD),
-    Pa15(pa15, PfC),
-}
-
-// sercom3[0]:  PA16:D   PA22:C
-// sercom3[1]:  PA17:D   PA23:C
-// sercom3[2]:  PA18:D   PA24:C   PA20:D
-// sercom3[3]:  PA19:D   PA25:C   PA21:D
-
-pub enum Sercom3Pad0 {
-    Pa16(pa16, PfD),
-    Pa22(pa22, PfC),
-}
-pub enum Sercom3Pad1 {
-    Pa17(pa17, PfD),
-    Pa23(pa23, PfC),
-}
-pub enum Sercom3Pad2 {
-    Pa18(pa18, PfD),
-    Pa20(pa20, PfD),
-    Pa24(pa24, PfC),
-}
-pub enum Sercom3Pad3 {
-    Pa19(pa19, PfD),
-    Pa21(pa21, PfD),
-    Pa25(pa25, PfC),
+    Pa17(pa17, PfC),
 }
 );
 

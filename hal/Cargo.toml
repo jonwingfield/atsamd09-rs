@@ -5,8 +5,11 @@ authors = ["jonwingfield <wingfield.jon@gmail.com>"]
 
 [dependencies]
 cortex-m = "~0.5"
-embedded-hal = "~0.2"
 nb = "~0.1"
+
+[dependencies.embedded-hal]
+version = "~0.2"
+features = ["unproven"]
 
 [dependencies.void]
 default-features = false
@@ -20,13 +23,33 @@ path = "../atsamd09d14a"
 version = "~0.1"
 optional = true
 
+[dev-dependencies]
+panic-abort = "~0.1"
+panic-semihosting = "~0.1"
+cortex-m-semihosting = "~0.2"
+cortex-m-rtfm = "~0.3"
+cortex-m-rt = "~0.5"
+
+
+[dev-dependencies.embedded-nrf24l01]
+version = "~0.2"
+path = "../../embedded-nrf24l01"
+features = ["tiny"]
+
+# disable both incremental compilation and parallel codegen to reduce the chances of running into
+# rust-lang/rust#47074
+[profile.dev]
+codegen-units = 1
+incremental = false
+lto = false
+
 [features]
 # We default to picking one of the target mcus so that a `cargo build` or
 # `cargo package` run for this crate will succeed.  Without this we won't
 # pull in any mcu crate and that would fail.  Board support crates that
 # pull in this hal are likely to want to use default-features=false when
 # adding their dep on "atsamd21-hal".
-default = ["samd09d14a"]
+default = ["rt", "samd09d14a", "unproven", "inline_asm"]
 
 # This section lists our feature name to dependency mapping.  This are separated
 # out so that the board support crates can reference a single feature name to
@@ -36,6 +59,7 @@ default = ["samd09d14a"]
 # rt feature would link all possible parts in and cause a linker error due to
 # the high degree of similar symbols present in the various parts.
 samd09d14a = ["atsamd09d14a"]
-
 rt = ["atsamd09d14a/rt"]
 unproven = ["embedded-hal/unproven"]
+use_semihosting = []
+inline_asm = ["cortex-m/inline-asm"]
